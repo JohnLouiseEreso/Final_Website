@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+  margin: auto;
+  width: 50%;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=email] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4629e9;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <form action="https://formsubmit.co/jlereso6@gmail.com" method="POST"> 
+    <h2>New Account</h2>
+    <div class="inputBox">
+      <label>Username</label>
+      <input type="text" name="username" required>
+    </div>
+    <div class="inputBox">
+      <label>Email</label>
+      <input type="email" name="email" required>
+    </div>
+    <div class="inputBox">
+      <label>Create Password</label>
+      <input type="password" name="password" required>
+    </div>
+    <div class="inputBox">
+      <label>Confirm Password</label>
+      <input type="password" name="cpassword" required>
+    </div>
+    <div class="inputBox">
+      <input type="submit" value="Create" class="registerbtn">
+    </div>
+    <p>Already have an Account? <a href="#">Login</a></p>
+  </form>
+</div>
+
+<script>
+  document.querySelectorAll('label').forEach(label => {
+    label.innerHTML = label.innerText.split('').map((letter, i) =>
+      `<span style="transition-delay: ${i * 50}ms">${letter}</span>`).join('');
+  });
+</script>
+
+</body>
+</html>
